@@ -8,29 +8,26 @@ Easy script that monitors the GPS Chrony NTP source and sends Gotify alerts on s
 
 1.  **Checks the NTP GPS source:**
     
-    -   Uses `chronyc sources` to determine if the GPS (NMEA) is currently the **primary time source** (`#*`).
+    -     Uses chronyc sources to find the GPS/NMEA source by name (e.g., "NMEA") and read its primary marker and reach value.
         
 2.  **Determines GPS status:**
     
-    -   If GPS is the primary source **and** reachable (`Reach > 0`), the status is `OK`.
-        
-    -   Otherwise, the status is `FAIL`.
+    -     Status is OK if the GPS source is the primary time source (#*) and its reach value is greater than 0 (has signal).
+
+    -     Status is FAIL if it is not the primary source or the reach value is 0 (lost signal).
         
 3.  **Compares with previous status:**
     
-    -   Reads the last known status from a temporary file.
-        
-    -   Only triggers a notification if the status has **changed**.
+    -     Reads the last known status from a temporary file and only proceeds if the status has changed.
         
 4.  **Sends Gotify notification on status change:**
-    
-    -   If GPS fails: sends a **high-priority alert**.
+    -     If GPS fails: sends a **high-priority alert**.
         
-    -   If GPS is restored: sends a **restoration notice**.
+    -     If GPS is restored: sends a **restoration notice**.
         
 5.  **Stores the current status:**
     
-    -   Saves the current status to a file for the next check.
+    -     Saves the current status to a file for the next check.
 
 ## By Anoniemerd
 
