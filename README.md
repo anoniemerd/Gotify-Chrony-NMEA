@@ -52,7 +52,7 @@ Copy and paste the following code:
 
 # Gotify server URL + API token
 # REPLACE with your own server address and token
-GOTIFY_URL="https://yourdomain.tld/message?token=YOURTOKENHERE"
+GOTIFY_URL="https://your-gotify-server.com/message?token=YOUR_TOKEN"
 
 # Name of the GPS/NMEA source as it appears in 'chronyc sources'
 # Change this if your source has a different name than "NMEA"
@@ -137,7 +137,6 @@ fi
 
 # Save the current status for comparison in the next run
 echo "$CURRENT_STATUS" > "$STATUS_FILE"
-
 
 ```
 
