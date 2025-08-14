@@ -1,7 +1,8 @@
 # Gotify-Chrony-NMEA
 Easy script that monitors the GPS Chrony NTP source and sends Gotify alerts on status changes.
 
-<img width="1138" height="555" alt="afbeelding" src="https://github.com/user-attachments/assets/01ffc425-63d3-4ab3-bdfc-5fc81dbf1b7c" />
+<img width="1144" height="555" alt="afbeelding" src="https://github.com/user-attachments/assets/66e38159-861a-47b4-a224-100502599d4d" />
+
 
 ### **Script Summary**
 
