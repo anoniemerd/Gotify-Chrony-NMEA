@@ -40,13 +40,6 @@ Create the monitoring script:
 ```bash
 sudo nano /usr/local/bin/check_gps_status.sh
 ```
-
-
-### 2️⃣ Make the Script Executable
-
-```bash
-sudo chmod +x /usr/local/bin/check_gps_status.sh
-```
 Copy and paste the following code:
 
 ```bash
@@ -116,6 +109,12 @@ fi
 # -------------------------------
 echo "$CURRENT_STATUS" > "$STATUS_FILE"
 
+```
+
+### 2️⃣ Make the Script Executable
+
+```bash
+sudo chmod +x /usr/local/bin/check_gps_status.sh
 ```
 
 ### 3️⃣ Schedule the Script
